@@ -1,0 +1,245 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+
+
+
+
+
+/* page */
+body {
+  background: linear-gradient(180deg, #eaf5ec 0%, #f6fff7 100%);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 16px;
+}
+
+/* card */
+.App {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(19, 49, 24, 0.08);
+  padding: 26px;
+  width: 480px;
+  max-width: 96%;
+  animation: appear 260ms ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 20px;
+  color: #1b5e20;
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* labels and inputs */
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2f2f2f;
+  display: block;
+  margin-top: 12px;
+}
+
+.section-label {
+  margin-top: 14px;
+}
+
+/* inline groups for radio/checkbox */
+.inline-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+/* make radio/checkbox + text inline and visible */
+.inline-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #2b2b2b; /* ensures text is visible */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #212121;
+  background: #fbfdfb;
+  box-sizing: border-box;
+  transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+input[type="file"] {
+  padding: 8px;
+}
+
+/* focus state */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3f9a40;
+  box-shadow: 0 4px 10px rgba(63, 154, 64, 0.12);
+}
+
+/* radio/checkbox sizes */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+/* small file name text */
+.file-info {
+  font-size: 13px;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  width: 48%;
+  color: #fff;
+}
+
+.btn.submit {
+  background: linear-gradient(180deg, #43a047, #2e7d32);
+  box-shadow: 0 6px 18px rgba(46, 125, 50, 0.12);
+}
+
+.btn.reset {
+  background: linear-gradient(180deg, #ef5350, #d32f2f);
+  box-shadow: 0 6px 18px rgba(211, 47, 47, 0.08);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* messages */
+.msg {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.msg.info {
+  background: #fff8e1;
+  color: #8a6d00;
+  border: 1px solid #ffe082;
+}
+
+.msg.success {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.msg.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+/* summary box */
+.summary {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9faf9;
+  color: #2f2f2f;
+  border: 1px solid #edf7ee;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size: 13px;
+}
+.summary h3 {
+  margin: 0 0 8px 0;
+  color: #234d20;
+}
+
+/* small responsiveness */
+@media (max-width: 520px) {
+  .App { padding: 18px; }
+  .button-row { flex-direction: column; }
+  .btn { width: 100%; }
+}
